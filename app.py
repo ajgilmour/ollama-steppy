@@ -60,7 +60,7 @@ def resetJSON():
     return "Experiments file reset!"
 
 
-# Reset JSON and serve index render_template
+# Reset JSON and serve index template
 @app.route("/", methods=["GET"])
 def home():
     resetJSON()
@@ -76,7 +76,7 @@ def fetch_collections():
     return collection_names
 
 
-# Dump contents of Experiments in selectetd Collection
+# Dump contents of Experiments in selected Collection
 @app.route("/learn", methods=["POST"])
 @cross_origin()
 def learn():
